@@ -11,7 +11,26 @@ void setup()
 
 void loop()
 {
+//test for whether the switch is high or low
+//if switch is low, go to the manual control branch using the pot
+//if switch is high, go to the auto control branch
+
   potValue = analogRead(A0);
   potValue = map(potValue, 0, 1023, 0, 180);
   ESC.write(potValue);
 }
+
+/*void manual()
+{
+  potValue = analogRead(A0);
+  potValue = map(potValue, 0, 1023, 0, 180);
+  ESC.write(potValue);
+}
+*/
+
+/*void auto()
+{
+  //commands for auto control of the motor speed
+  //until this code is created, just get the motor to run down if this mode is selected
+} 
+*/ 
